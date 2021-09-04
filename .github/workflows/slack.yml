@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run Python
-        env: 
+        env:
           SLACK_URL: ${{  secrets.LAB_NLIN  }}
-        run: python slack.py ${SLACK_URL}
+        run:
+          echo "${SLACK_URL}"
+          python slack.py "${SLACK_URL}"
