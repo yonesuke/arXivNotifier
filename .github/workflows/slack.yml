@@ -2,8 +2,10 @@ name: arXiv notification
 
 on:
   push:
-    branches: 
+    branches:
       - main
+  schedule:
+    - cron: '0 0 */1 * *'
   workflow_dispatch:
 
 jobs:
