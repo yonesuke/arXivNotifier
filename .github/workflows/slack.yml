@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  numpy-test:
+  slack_notification:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run Python
-        run: python slack.py
+        run: python slack.py ${{secrets.LAB_NLIN}}
