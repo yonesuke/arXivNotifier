@@ -24,5 +24,4 @@ jobs:
         env:
           SLACK_URL: ${{  secrets.LAB_NLIN  }}
         run:
-          echo "${SLACK_URL}"
-          python slack.py "${SLACK_URL}"
+          echo "${SLACK_URL}"; python slack.py "${SLACK_URL}"
